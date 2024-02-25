@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../buildMultiTargeting/BlazorInputBug.Client.props" />
-</Project>
