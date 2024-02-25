@@ -16,8 +16,6 @@ public class SomeOtherClass {
 
 public class EditForm : Microsoft.AspNetCore.Components.Forms.EditForm
 {
-    [CascadingParameter(Name = "ThisCanBeAnyClass")]
-    public ThisCanBeAnyClass? ThisCanBeAnyClass { get; set; }
 
     public SomeOtherClass SomeOtherClass { get; set; } = new();
 
@@ -25,8 +23,6 @@ public class EditForm : Microsoft.AspNetCore.Components.Forms.EditForm
     {
         Debug.Assert(EditContext != null);
         builder.OpenRegion(EditContext.GetHashCode());
-
-
         builder.OpenComponent<CascadingValue<SomeOtherClass>>(1);
         builder.AddComponentParameter(0, "IsFixed", false);
         builder.AddComponentParameter(1, "Name", "SomeOtherClass");
