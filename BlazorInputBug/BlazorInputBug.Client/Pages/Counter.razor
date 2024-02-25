@@ -1,0 +1,20 @@
+﻿@page "/counter"
+@rendermode InteractiveWebAssembly
+
+<PageTitle>Counter</PageTitle>
+
+
+<EditForm Model="Model">
+     <Microsoft.AspNetCore.Components.Forms.ObjectGraphDataAnnotationsValidator />
+    <InputText @bind-Value="Model.SomeText" />
+    <InputTextExtend @bind-Value="Model.SomeText2" />
+</EditForm>
+
+
+@code {
+    private ModelPoco Model { get; set; } = new();
+    public class ModelPoco {
+        public string SomeText { get; set; } = "Some long sentence";
+        public string SomeText2 { get; set; } = "Some long sentence";
+    }
+}
