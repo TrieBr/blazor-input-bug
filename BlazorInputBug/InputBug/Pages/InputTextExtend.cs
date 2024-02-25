@@ -20,7 +20,7 @@ public class InputTextExtend : Microsoft.AspNetCore.Components.Forms.InputText
         if (!string.IsNullOrEmpty(CssClass))
             builder.AddAttribute(3, "class", CssClass);
         builder.AddAttribute(4, "value", CurrentValueAsString);
-        builder.AddAttribute(5, "onchange", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
+        builder.AddAttribute(5, "oninput", EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString));
         builder.SetUpdatesAttributeName("value");
         builder.AddElementReferenceCapture(6, __inputReference => Element = __inputReference);
         builder.CloseElement();
