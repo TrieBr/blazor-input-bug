@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Rendering;
-namespace BlazorInputBug.Client.Pages;
+namespace InputBug.Pages;
 
 
 public class ThisCanBeAnyClass
