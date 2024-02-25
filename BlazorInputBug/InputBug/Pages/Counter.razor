@@ -4,13 +4,14 @@
 
 
 <EditForm Model="Model">
-    <InputText @bind-Value="Model.SomeText" />
+    <InputTextFour @bind-Value="Model.SomeText" />
     <InputTextExtend @bind-Value="Model.SomeText2" />
 </EditForm>
 
 
 
-@code {
+@code    {
+    
     private ModelPoco Model { get; set; } = new();
     private ThisCanBeAnyClass ThisCanBeAnyClass { get; set; }  = new();
     public class ModelPoco {
